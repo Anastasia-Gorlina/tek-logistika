@@ -24,7 +24,7 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    background: url('Картинки для лендинга/для лэндинга логистика-01.png');
+    background: url('image/image-01.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -65,7 +65,7 @@ body {
 
 /* Главная секция */
 .hero {
-    background: url('Картинки для лендинга/для лэндинга логистика-01.png');
+    background: url('image/image-01.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -211,7 +211,7 @@ body {
 .help-table {
     display: flex;
     flex-direction: column;
-    background: url('Картинки для лендинга/для лэндинга логистика-03.png');
+    background: url('image/image-03.png');
     background-size: cover;
     background-position: center;
 }
@@ -288,7 +288,7 @@ body {
     gap: 0.2rem;
 }
 .transport-text-1 {
-    background: url('Картинки для лендинга/Составная картинка_1.png');
+    background: url('image/composite_image1.png');
     min-height: 80vh;
     width: 100%;
     background-size: cover;
@@ -301,7 +301,7 @@ body {
     padding: 1rem;
 }
 .transport-text-2 {
-    background: url('Картинки для лендинга/Составная картинка_2.png');
+    background: url('image/composite_image2.png');
     min-height: 80vh;
     width: 100%;
     background-size: cover;
@@ -315,7 +315,7 @@ body {
     line-height: 1.1;
 }
 .transport-text-3 {
-    background: url('Картинки для лендинга/Составная картинка_3.png');
+    background: url('image/composite_image3.png');
     min-height: 80vh;
     width: 100%;
 
@@ -329,7 +329,7 @@ body {
     padding: 1rem;
 }
 .transport-text-4 {
-    background: url('Картинки для лендинга/Составная картинка_4.png');
+    background: url('image/Сcomposite_image4.png');
     min-height: 80vh;
     width: 100%;
     padding: 1rem;
@@ -378,19 +378,19 @@ body {
 }
 
 .card-1 {
-    background: url('Картинки для лендинга/для лэндинга логистика-12.png');
+    background: url('image/image-12.png');
     background-size: cover;
     background-position: center;
 }
 
 .card-2 {
-    background: url('Картинки для лендинга/для лэндинга логистика-13.png');
+    background: url('image/image-13.png');
     background-size: cover;
     background-position: center;
 }
 
 .card-3 {
-    background: url('Картинки для лендинга/для лэндинга логистика-14.png');
+    background: url('image/image-14.png');
     background-size: cover;
     background-position: center;
 }
@@ -423,10 +423,6 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-/* Слайд с карточками транспорта */
-/* .transport-cards-slide {
-    padding: 2rem 0;
-} */
 
 .transport-cards-slide .transport-cards {
     display: grid;
@@ -435,7 +431,6 @@ body {
     width: 100%;
 }
 
-/* Слайд с предложениями */
 .offers-slide {
     align-items: center;
     padding: 2rem;
@@ -481,7 +476,7 @@ body {
     color: #17336a;
 }
 .introduction-content-item-text {
-    background: url('Картинки для лендинга/для лэндинга логистика-08.png');
+    background: url('image/image-08.png');
     background-size: cover;
     height: 500px;
     color: white;
@@ -549,7 +544,6 @@ body {
         padding: 1rem;
     }
 
-/* Блок интеграций */
 .system-integrations-section {
     padding: 4rem 2rem;
     background: white;
@@ -650,12 +644,6 @@ body {
 }
 
 
-
-
-
-/* Блок компонентов решения */
-
-
 .solution-components-content {
     display: flex;
     align-items: center;
@@ -714,16 +702,7 @@ body {
     padding: 2rem 1.5rem;
     background: white;
     border: 0.5px solid #17336a;
-    /* border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
-    /* text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
-
-/* .header-effect:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-} */
 
 .header-effect h3 {
     font-size: 4rem;
@@ -847,7 +826,7 @@ body {
 /* Контакты */
 
 .contact-content {
-    background: url('Картинки для лендинга/для лэндинга логистика-11.png');
+    background: url('image/image-11.png');
     background-size: cover;
     background-position: center;
     margin: 0 auto;
