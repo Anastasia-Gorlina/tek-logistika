@@ -329,7 +329,7 @@ body {
     padding: 1rem;
 }
 .transport-text-4 {
-    background: url('image/Сcomposite_image4.png');
+    background: url('image/composite_image4.png');
     min-height: 80vh;
     width: 100%;
     padding: 1rem;
@@ -986,7 +986,6 @@ body {
     }
     
     .system-integrations-grid {
-        flex-direction: column;
         gap: 1rem;
     }
     
@@ -1071,7 +1070,6 @@ body {
     .table-cell {
         min-height: 120px;
         border: none;
-        /* padding: 2rem; */
     }
     
     .cell-icon {
@@ -1127,7 +1125,6 @@ body {
     }
     
     .system-integrations-grid {
-        flex-direction: column;
         gap: 1rem;
     }
     
@@ -1138,7 +1135,7 @@ body {
     
     .system-integration-row-top {
         display: grid;
-        /* grid-template-columns: 1fr; */
+        grid-template-columns: 1fr;
         gap: 0.5rem;
     }
     
@@ -1343,6 +1340,10 @@ body {
         font-size: 0.8rem;
         padding: 1rem 2rem;
     }
+    .system-integration-item-right {
+        width: 100%;
+    }
+    
     .introduction-content-item-text-title {
         padding: 1rem;
         width: 30%;
