@@ -1,0 +1,1385 @@
+/* Сброс стилей и базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.container {
+    margin: 4rem;
+}
+
+/* Заголовок и навигация */
+.header {
+    backdrop-filter: blur(10px);
+    color: #333;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background: url('Картинки для лендинга/для лэндинга логистика-01.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 450px;
+    padding: 2rem 2rem 0;
+}
+
+.nav-brand .logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+
+}
+
+.nav-menu a {
+    color: #17336a;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 25px;
+    background: transparent;
+}
+
+.nav-menu a:hover {
+    color: #17336a;
+    background: rgba(30, 58, 138, 0.1);
+}
+
+/* Главная секция */
+.hero {
+    background: url('Картинки для лендинга/для лэндинга логистика-01.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2rem;
+}
+
+.hero-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 3rem;
+}
+
+.main-title {
+    font-size: 6rem;
+    font-weight: 900;
+    background: linear-gradient(to bottom, #17336a, #3a42ad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    letter-spacing: 4px;
+    word-spacing: 210px;
+    position: relative;
+    mask: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    -webkit-mask: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #17336a;
+    text-align: right;
+    align-self: flex-end;
+    position: relative;
+    padding: 0.5rem 2rem;
+}
+
+.hero-subtitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    border-left: 3px solid #17336a;
+    border-top: 3px solid #17336a;
+    border-bottom: 3px solid #17336a;
+    border-right: none;
+}
+
+.hero-subtitle::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    border-right: 3px solid #17336a;
+    border-top: 3px solid #17336a;
+    border-bottom: 3px solid #17336a;
+    border-left: none;
+}
+
+
+
+
+/* Секции */
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #17336a;
+    font-weight: 400;
+}
+
+/* О компании */
+.about {
+    padding: 1rem 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.about-text {
+    background: white;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    color: #17336a;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #64748b;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.about-text p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #9ca3af;
+}
+
+.about-text.no-triangles p {
+    padding-left: 0;
+}
+
+.about-text.no-triangles p::before {
+    display: none;
+}
+
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Секция about2 */
+.about2 {
+    padding: 1rem 0;
+}
+
+
+.help-table {
+    display: flex;
+    flex-direction: column;
+    background: url('Картинки для лендинга/для лэндинга логистика-03.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-bottom: 2px solid white;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-cell {
+    background: transparent;
+    padding: 2.5rem;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    border-right: 2px solid white;
+}
+
+.table-cell:last-child {
+    border-right: none;
+}
+
+.cell-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cell-image {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.cell-image-triangle {
+    width: 14px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cell-content p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 300px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Слайд с транспортом */
+
+.transport-content {
+    z-index: 1;
+    position: relative;
+}
+.transport-texts {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    gap: 0.2rem;
+}
+.transport-text-1 {
+    background: url('Картинки для лендинга/Составная картинка_1.png');
+    min-height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    align-items: end;
+    padding: 1rem;
+}
+.transport-text-2 {
+    background: url('Картинки для лендинга/Составная картинка_2.png');
+    min-height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    align-items: end;
+    padding: 1rem;
+    line-height: 1.1;
+}
+.transport-text-3 {
+    background: url('Картинки для лендинга/Составная картинка_3.png');
+    min-height: 80vh;
+    width: 100%;
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    align-items: end;
+    padding: 1rem;
+}
+.transport-text-4 {
+    background: url('Картинки для лендинга/Составная картинка_4.png');
+    min-height: 80vh;
+    width: 100%;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    align-items: end;
+
+}
+.transport-text {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    line-height: 1.3;
+}
+
+.transport-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.3;
+}
+
+.transport-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.transport-card {
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.card-1 {
+    background: url('Картинки для лендинга/для лэндинга логистика-12.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-2 {
+    background: url('Картинки для лендинга/для лэндинга логистика-13.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-3 {
+    background: url('Картинки для лендинга/для лэндинга логистика-14.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.transport-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.card-title {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    z-index: 2;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.card-text {
+    color: white;
+    line-height: 1.4;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Слайд с карточками транспорта */
+/* .transport-cards-slide {
+    padding: 2rem 0;
+} */
+
+.transport-cards-slide .transport-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Слайд с предложениями */
+.offers-slide {
+    align-items: center;
+    padding: 2rem;
+}
+
+
+
+.offers-title {
+    padding: 2rem 1.5rem;
+    color: white;
+    background:  #17336a;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
+.table-header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.header-cell {
+    padding: 1.5rem 2rem;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #17336a;
+    line-height: 1.4;
+    transition: background-color 0.3s ease;
+}
+
+.header-cell:hover {
+    background: #e2e8f0;
+}
+.introduction {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.introduction-title {
+    color: #17336a;
+}
+.introduction-content-item-text {
+    background: url('Картинки для лендинга/для лэндинга логистика-08.png');
+    background-size: cover;
+    height: 500px;
+    color: white;
+    display: flex;
+    align-items: end;
+}
+.introduction-content-item-text-title {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 200px;
+    background-color: #17336a;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.introduction-content-item-text-sub-title {
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    width: 80%;
+    height: 200px;
+    align-items: center;
+    padding: 1rem;
+}
+.introduction-content-item-table-item {
+    display: flex;
+}
+.introduction-content-item-table-item-text {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+.introduction-content-item-table-item-text-2 {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    color: #17336a;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.introduction-content-item-table-item-text-2 h3 {
+    color: #17336a;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.introduction-content-item-table-item-text-3 {
+    width: 30%;
+    background: rgba(23, 51, 106, 0.5);
+    border-right: 1px solid white;
+    color: white;
+    padding: 1rem;
+}
+    .introduction-content-item-table-item-text-4 {
+        width: 70%;
+        background:rgba(23, 51, 106, 0.5);
+        color: white;
+        padding: 1rem;
+    }
+
+/* Блок интеграций */
+.system-integrations-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.system-integrations-container {
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.system-integrations-main {
+    background: #17336a;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 180px;
+    height: 160px;
+}
+
+.system-integrations-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    text-align: center;
+}
+
+.system-integrations-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.system-integration-row {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.system-integration-row-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.system-integration-row-middle {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.system-integration-row-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.system-integration-item-right {
+    border: 1px solid #e2e8f0;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    align-content: flex-end;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+
+.system-integration-item {
+    border: 1px solid #e2e8f0;
+
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.system-integration-item:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.system-integration-item-wide {
+    grid-column: 1 / -1;
+}
+
+.system-integration-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #334155;
+}
+
+
+
+
+
+/* Блок компонентов решения */
+
+
+.solution-components-content {
+    display: flex;
+    align-items: center;
+}
+
+.solution-component-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.solution-component-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solution-component-image {
+    max-width: 800px;
+    height: 130px;
+    object-fit: contain;
+    border: 0.5px solid #17336a;
+}
+.solution-component-image-2 {
+    max-width: 400px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.solution-component-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    background: rgba(23, 51, 106, 0.5);
+    padding: 3rem 13rem;
+    line-height: 1.4;
+}
+.effects-content {
+    padding: 2rem;
+}
+
+.effect-title {
+    padding: 1.5rem 1rem;
+    color: #17336a;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.table-header-effect {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.header-effect {
+    padding: 2rem 1.5rem;
+    background: white;
+    border: 0.5px solid #17336a;
+    /* border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+    /* text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+/* .header-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+} */
+
+.header-effect h3 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(23, 51, 106, 0.5);
+    margin: 0 0 0.5rem 0;
+    line-height: 1;
+}
+
+.header-effect p {
+    font-size: 1.1rem;
+    align-content: center;
+    line-height: 1.4;
+    color: #64748b;
+}
+
+.table-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.content-cell {
+    padding: 1.5rem 1rem;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    text-align: center;
+    justify-content: center;
+}
+
+.content-cell:last-child {
+    border-right: none;
+}
+
+.arrow-icon {
+    color: #17336a;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.effects-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.effects-table {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.effects-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.effects-cell {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #17336a;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Преимущества */
+.advantages {
+    padding: 2rem 0;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.advantage-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-image {
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.advantage-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.advantage-item h3 {
+    font-size: 1.2rem;
+    color: #17336a;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.advantage-item p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Контакты */
+
+.contact-content {
+    background: url('Картинки для лендинга/для лэндинга логистика-11.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid #17336a;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #17336a;
+    color: white;
+    border-radius: 50%;
+}
+
+.contact-details h4 {
+    color: #17336a;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-details p {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 20rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    align-content: center;
+    color: #e2e8f0;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #e2e8f0;
+    color: #17336a;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #17336a;
+}
+
+.contact-form button {
+    background: #17336a;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #1e40af;
+}
+
+/* Подвал */
+.footer {
+    background: #17336a;
+    color: white;
+    padding: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-logo p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+.footer-info p {
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+/* Адаптивность */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+    .container {
+        margin: 2rem;
+    }
+    
+    .main-title {
+        font-size: 4rem;
+        word-spacing: 120px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .transport-cards-slide .transport-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .system-integrations-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .system-integrations-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contact-form {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .table-header-effect {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .solution-components-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .solution-component-image {
+        max-width: 600px;
+        height: 100px;
+    }
+    
+    .solution-component-image-2 {
+        max-width: 300px;
+        height: 250px;
+    }
+    
+    .solution-component-text {
+        font-size: 1rem;
+        padding: 2rem 8rem;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-title {
+        font-size: 3rem;
+        word-spacing: 60px;
+        letter-spacing: 2px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+        max-width: 300px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-content {
+        gap: 1rem;
+    }
+    
+    .about2 .section-title {
+        font-size: 2.2rem;
+    }
+    .section-title {
+        margin-bottom: 0;
+    }
+    .system-integration-item-right {
+        border: 1px solid #e2e8f0;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        transition: all 0.3s ease;
+        position: relative;
+        margin-top: 1rem;
+    }
+    
+    .table-row {
+        grid-template-columns: 1fr;
+        border: none;
+    }
+    
+    .table-cell {
+        min-height: 120px;
+        border: none;
+        /* padding: 2rem; */
+    }
+    
+    .cell-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .cell-content p {
+        font-size: 1rem;
+    }
+    
+    .help-table {
+        padding: 1rem;
+    }
+    .transport-texts {
+        flex-direction: column;
+    }
+    .transport-slide {
+        background-attachment: scroll;
+    }
+    
+    .transport-title {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .transport-cards-slide .transport-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .transport-card {
+        aspect-ratio: 1;
+        padding: 1.5rem;
+    }
+    
+    .system-integrations-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .system-integrations-main {
+        width: 100%;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+    
+    .system-integrations-title {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 1.5rem;
+    }
+    
+    .system-integrations-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .system-integration-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .system-integration-row-top {
+        display: grid;
+        /* grid-template-columns: 1fr; */
+        gap: 0.5rem;
+    }
+    
+    
+    .system-integration-item span {
+        font-size: 0.8rem;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    .card-text {
+        font-size: 0.8rem;
+    }
+    
+    .offers-title {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+    
+    .table-header {
+        grid-template-columns: 1fr;
+    }
+    
+    .offers-slide {
+        padding: 50px 0;
+    }
+    
+    .offers-title {
+        font-size: 1.2rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .table-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-cell {
+        
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .content-cell {
+        border-right: none;
+    }
+    
+    .effects-title {
+        font-size: 1.5rem;
+    }
+    
+    .effects-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .effects-cell {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .header-effect h3 {
+        font-size: 2rem;
+    }
+    
+    .table-header-effect {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .header-effect {
+        padding: 1.5rem 1rem;
+    }
+    .introduction {
+        gap: 1rem;
+    }
+    
+    .advantages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        text-align: center;
+    }
+    
+    .footer-info {
+        text-align: center;
+    }
+    
+    .solution-components-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .solution-component-image {
+        max-width: 100%;
+        height: 80px;
+    }
+    
+    .solution-component-image-2 {
+        max-width: 100%;
+        height: 200px;
+    }
+    
+    .solution-component-text {
+        font-size: 0.9rem;
+        padding: 1.5rem 4rem;
+    }
+    .introduction-content-item-text-title {
+        padding: 1rem;
+        width: 30%;
+    }
+    .introduction-content-item-table-item-text {
+        width: 40%;
+    }
+    .introduction-content-item-table-item-text-3 {
+        width: 40%;
+    }
+}
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        background-attachment: scroll;
+        min-height: 80vh;
+    }
+    
+    .transport-card {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-text {
+        font-size: 0.7rem;
+    }
+    
+    .header-effect h3 {
+        font-size: 2rem;
+    }
+    
+    .header-effect p {
+        font-size: 0.9rem;
+    }
+    
+    .system-integration-item {
+        padding: 0.8rem 0.5rem;
+    }
+    
+    .system-integration-item span {
+        font-size: 0.7rem;
+    }
+    
+    .contact-form {
+        padding: 0.5rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .solution-components-content {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .solution-component-image {
+        height: 60px;
+    }
+    
+    .solution-component-image-2 {
+        height: 150px;
+    }
+    
+    .solution-component-text {
+        font-size: 0.8rem;
+        padding: 1rem 2rem;
+    }
+    .introduction-content-item-text-title {
+        padding: 1rem;
+        width: 30%;
+    }
+    .introduction-content-item-table-item-text {
+        width: 40%;
+    }
+    .introduction-content-item-table-item-text-3 {
+        width: 40%;
+    }
+}
