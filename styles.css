@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
@@ -31,11 +31,22 @@ body {
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 450px;
-    padding: 2rem 2rem 0;
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+    padding: 2rem 2rem 0 ;
+    width: 100% ;
+}
+
+.nav-content {
+    font-size: 1.4rem ;
+    display: flex ;
+    align-items: center ;
+    gap: 3rem;
+}
+
+.nav-brand {
+    flex-shrink: 0;
 }
 
 .nav-brand .logo {
@@ -47,7 +58,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
-
+    text-decoration: underline;
 }
 
 .nav-menu a {
@@ -61,6 +72,28 @@ body {
 .nav-menu a:hover {
     color: #17336a;
     background: rgba(30, 58, 138, 0.1);
+    
+}
+
+.nav-contact {
+    padding-left: 2rem;
+    /* border-left: 2px solid #17336a; */
+}
+
+.nav-contact a {
+    color: #17336a;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-contact a:hover {
+    color: white;
+    background: #17336a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(23, 51, 106, 0.3);
 }
 
 /* Главная секция */
@@ -84,18 +117,16 @@ body {
 }
 
 .main-title {
-    font-size: 6rem;
-    font-weight: 900;
-    background: linear-gradient(to bottom, #17336a, #3a42ad);
+    font-size: 7rem;
+    background: linear-gradient(to bottom, #17336a, transparent);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
-    letter-spacing: 4px;
-    word-spacing: 210px;
+    word-spacing: 170px;
     position: relative;
-    mask: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
-    -webkit-mask: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    /* mask: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    -webkit-mask: linear-gradient(to bottom, black 0%, black 60%, transparent 100%); */
 }
 
 .hero-subtitle {
@@ -134,15 +165,12 @@ body {
     border-left: none;
 }
 
-
-
-
 /* Секции */
 .section-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: #17336a;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 /* О компании */
@@ -170,7 +198,7 @@ body {
     font-size: 1.5rem;
     line-height: 1.8;
     margin-bottom: 1rem;
-    color: #64748b;
+    color: #17336a;
     position: relative;
     padding-left: 2rem;
 }
@@ -185,7 +213,7 @@ body {
     height: 0;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
-    border-left: 12px solid #9ca3af;
+    border-left: 12px solid #17336a;
 }
 
 .about-text.no-triangles p {
@@ -199,6 +227,19 @@ body {
 
 .about-text p:last-child {
     margin-bottom: 0;
+}
+
+
+.about-text.with-border p::before {
+    border-left: 12px solid #17336a;
+}
+
+.about-text-content {
+    border: 1px solid #17336a;
+}
+
+.description-text p {
+    color: #64748b;
 }
 
 
@@ -252,21 +293,21 @@ body {
 }
 
 .cell-image {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     flex-shrink: 0;
 }
 .cell-image-triangle {
-    width: 14px;
-    height: 40px;
+    width: 18px;
+    height: 55px;
     object-fit: contain;
     flex-shrink: 0;
 }
 
 .cell-content p {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.4;
     margin: 0;
@@ -280,13 +321,28 @@ body {
     z-index: 1;
     position: relative;
 }
+
+.transport-title {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+    text-align: left;
+}
 .transport-texts {
     display: flex;
     flex-direction: row;
     align-items: end;
     justify-content: end;
-    gap: 0.2rem;
+    /* gap: 0.2rem; */
 }
+
 .transport-text-1 {
     background: url('image/composite_image1.png');
     min-height: 80vh;
@@ -298,7 +354,18 @@ body {
     font-size: 2rem;
     font-weight: 400;
     align-items: end;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.transport-text-1::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    bottom: 1.5rem;
+    width: 4px;
+    height: 3rem;
+    background: blue;
 }
 .transport-text-2 {
     background: url('image/composite_image2.png');
@@ -308,17 +375,27 @@ body {
     background-position: center;
     display: flex;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     align-items: end;
-    padding: 1rem;
+    padding: 2rem 2rem 1.5rem;
     line-height: 1.1;
+    position: relative;
+}
+
+.transport-text-2::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    bottom: 1.5rem;
+    width: 4px;
+    height: 3rem;
+    background: blue;
 }
 .transport-text-3 {
     background: url('image/composite_image3.png');
     min-height: 80vh;
     width: 100%;
-
     background-size: cover;
     background-position: center;
     display: flex;
@@ -326,13 +403,24 @@ body {
     font-size: 2rem;
     font-weight: 400;
     align-items: end;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
+    position: relative;
+}
+
+.transport-text-3::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    bottom: 1.5rem;
+    width: 4px;
+    height: 3rem;
+    background: blue;
 }
 .transport-text-4 {
     background: url('image/composite_image4.png');
     min-height: 80vh;
     width: 100%;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -340,7 +428,17 @@ body {
     font-size: 2rem;
     font-weight: 400;
     align-items: end;
+    position: relative;
+}
 
+.transport-text-4::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    bottom: 1.5rem;
+    width: 4px;
+    height: 3rem;
+    background: blue;
 }
 .transport-text {
     color: white;
@@ -351,13 +449,6 @@ body {
     line-height: 1.3;
 }
 
-.transport-title {
-    color: white;
-    font-size: 3rem;
-    font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    line-height: 1.3;
-}
 
 .transport-cards {
     display: flex;
@@ -367,12 +458,12 @@ body {
 
 .transport-card {
     width: 100%;
-    aspect-ratio: 1;
     padding: 2rem;
+    height: 500px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: flex-start;
     gap: 2rem;
 }
@@ -406,15 +497,16 @@ body {
 }
 
 .card-title {
+    font-size: 2rem;
     color: white;
     font-weight: 700;
-    margin-bottom: 1rem;
     z-index: 2;
     position: relative;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .card-text {
+    font-size: 1.6rem;
     color: white;
     line-height: 1.4;
     margin: 0;
@@ -439,11 +531,11 @@ body {
 
 
 .offers-title {
-    padding: 2rem 1.5rem;
+    padding: 1rem;
     color: white;
     background:  #17336a;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 2rem;
+    line-height: initial;
     margin-bottom: 0;
 }
 
@@ -451,18 +543,29 @@ body {
 .table-header {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .header-cell {
     padding: 1.5rem 2rem;
     border: 1px solid #e2e8f0;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     font-weight: 500;
-    color: #17336a;
+    color: #64748b;
     line-height: 1.4;
     transition: background-color 0.3s ease;
+    position: relative;
+    align-content: center;
 }
-
+.header-cell-image {
+    width: 18px;
+    height: 53px;
+    display: block;
+    position: absolute;
+    top: -1.1rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
 .header-cell:hover {
     background: #e2e8f0;
 }
@@ -475,8 +578,24 @@ body {
 .introduction-title {
     color: #17336a;
 }
-.introduction-content-item-text {
+.introduction-content-item-text-1 {
     background: url('image/image-08.png');
+    background-size: cover;
+    height: 500px;
+    color: white;
+    display: flex;
+    align-items: end;
+}
+.introduction-content-item-text-2 {
+    background: url('image/image-09.png');
+    background-size: cover;
+    height: 500px;
+    color: white;
+    display: flex;
+    align-items: end;
+}
+.introduction-content-item-text-3 {
+    background: url('image/image-10.png');
     background-size: cover;
     height: 500px;
     color: white;
@@ -486,6 +605,8 @@ body {
 .introduction-content-item-text-title {
     justify-content: center;
     display: flex;
+    font-size: 1.8rem;
+    line-height: 2rem;
     flex-direction: column;
     width: 20%;
     height: 200px;
@@ -496,7 +617,9 @@ body {
 
 .introduction-content-item-text-sub-title {
     display: flex;
+    font-size: 1.5rem;
     background: rgba(0, 0, 0, 0.4);
+    line-height: 2rem;
     width: 80%;
     height: 200px;
     align-items: center;
@@ -504,15 +627,17 @@ body {
 }
 .introduction-content-item-table-item {
     display: flex;
+    font-size: 1.5rem;
 }
 .introduction-content-item-table-item-text {
     display: flex;
     width: 30%;
     flex-direction: column;
+    font-size: 1.3rem;
     background: rgba(0, 0, 0, 0.4);
     color: white;
     padding: 1rem;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 .introduction-content-item-table-item-text-2 {
     display: flex;
@@ -520,13 +645,14 @@ body {
     flex-direction: column;
     justify-content: center;
     background: white;
-    color: #17336a;
+    font-size: 1.3rem;
+    color: #64748b;
     padding: 1rem;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .introduction-content-item-table-item-text-2 h3 {
-    color: #17336a;
+    color: #64748b;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -562,8 +688,8 @@ body {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    width: 180px;
-    height: 160px;
+    width: 190px;
+    height: 200px;
 }
 
 .system-integrations-title {
@@ -607,8 +733,10 @@ body {
     gap: 1rem;
 }
 .system-integration-item-right {
+    font-size: 1.5rem;
     border: 1px solid #e2e8f0;
-    width: 400px;
+    color: #64748b;
+    width: 500px;
     display: flex;
     align-items: center;
     align-content: flex-end;
@@ -619,7 +747,6 @@ body {
 
 .system-integration-item {
     border: 1px solid #e2e8f0;
-
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -638,9 +765,9 @@ body {
 }
 
 .system-integration-item span {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    color: #334155;
+    color: #64748b;
 }
 
 
@@ -696,27 +823,44 @@ body {
 }
 .table-header-effect {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 .header-effect {
-    padding: 2rem 1.5rem;
+    padding: 2rem 2rem;
     background: white;
     border: 0.5px solid #17336a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 450px;
+    /* align-items: center;
+    text-align: center; */
 }
 
 .header-effect h3 {
-    font-size: 4rem;
-    font-weight: 700;
-    color: rgba(23, 51, 106, 0.5);
-    margin: 0 0 0.5rem 0;
+    font-family: 'Helvetica Neue', 'Arial Black', 'Arial', sans-serif !important;
+    font-size: 6rem;
+    font-weight: 900 !important;
+    color: rgba(23, 51, 106, 0.4);
+    margin: 0 0 1.5rem 0;
     line-height: 1;
 }
 
+.header-effect h3 .prefix {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
 .header-effect p {
-    font-size: 1.1rem;
+    font-size: 1.9rem;
     align-content: center;
     line-height: 1.4;
     color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.header-effect p:last-child {
+    margin-bottom: 0;
 }
 
 .table-content {
@@ -882,9 +1026,8 @@ body {
 .contact-form h3 {
     align-content: center;
     color: #e2e8f0;
-    font-size: 1.5rem;
-    font-weight: 200;
-    letter-spacing: 1px;
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 
 .contact-form input,
@@ -960,8 +1103,70 @@ body {
 
 /* Адаптивность */
 
+/* Большие экраны */
+@media (min-width: 1025px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 2rem 0;
+        width: 100%;
+    }
+    
+    .nav-content {
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+    .table-header-effect {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .header-effect {
+        padding: 2rem 2rem;
+    }
+    
+    .header-effect h3 {
+        font-family: 'Helvetica Neue', 'Arial Black', 'Arial', sans-serif !important;
+        font-size: 6rem;
+        font-weight: 900 !important;
+        margin: 0 0 1.5rem 0;
+    }
+    
+    .header-effect h3 .prefix {
+        font-size: 3rem;
+    }
+    
+    .header-effect p {
+        font-size: 1.9rem;
+    }
+    
+    .transport-title {
+        font-size: 2.3rem;
+        top: 15%;
+        left: 25%;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        line-height: 1.2;
+    }
+}
+
 /* Планшеты */
 @media (max-width: 1024px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+    .nav-content {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
     .container {
         margin: 2rem;
     }
@@ -978,6 +1183,63 @@ body {
     .transport-cards-slide .transport-cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+    }
+    
+    .transport-card {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-text {
+        font-size: 1.4rem;
+    }
+    
+    .offers-title {
+        font-size: 1.8rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .table-header {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .header-cell {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .table-header-effect {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header-effect {
+        padding: 1.5rem 1rem;
+    }
+    
+    .header-effect h3 {
+        font-family: 'Helvetica Neue', 'Arial Black', 'Arial', sans-serif !important;
+        font-size: 4rem;
+        font-weight: 900 !important;
+        margin: 0 0 1rem 0;
+    }
+    
+    .header-effect h3 .prefix {
+        font-size: 2rem;
+    }
+    
+    .header-effect p {
+        font-size: 1.4rem;
+    }
+    
+    .transport-title {
+        font-size: 2rem;
+        top: 12%;
+        left: 28%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
     
     .system-integrations-container {
@@ -1019,6 +1281,72 @@ body {
     }
 }
 
+/* Средние экраны */
+@media (max-width: 900px) {
+    .transport-cards-slide .transport-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .transport-card {
+        padding: 1.2rem;
+    }
+    
+    .card-title {
+        font-size: 1.6rem;
+    }
+    
+    .card-text {
+        font-size: 1.2rem;
+    }
+    
+    .offers-title {
+        font-size: 1.6rem;
+        padding: 1.2rem 1rem;
+    }
+    
+    .table-header {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+    .header-cell {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .table-header-effect {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header-effect {
+        padding: 1.2rem 0.8rem;
+        height: 250px;
+    }
+    
+    .header-effect h3 {
+        font-family: 'Helvetica Neue', 'Arial Black', 'Arial', sans-serif !important;
+        font-size: 3rem;
+        font-weight: 900 !important;
+        margin: 0 0 0.8rem 0;
+    }
+    
+    .header-effect h3 .prefix {
+        font-size: 1.5rem;
+    }
+    
+    .header-effect p {
+        font-size: 1.2rem;
+    }
+    
+    .transport-title {
+        font-size: 1.8rem;
+        top: 12%;
+        left: 32%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+}
+
 /* Мобильные устройства */
 @media (max-width: 768px) {
     .nav {
@@ -1026,10 +1354,24 @@ body {
         gap: 1rem;
     }
     
+    .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    
     .nav-menu {
         gap: 1rem;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    
+    .nav-contact {
+        padding-left: 0;
+        border-left: none;
+        padding-top: 1rem;
+        width: 100%;
+        text-align: center;
     }
     
     .main-title {
@@ -1070,6 +1412,8 @@ body {
     .table-cell {
         min-height: 120px;
         border: none;
+        justify-content: start;
+        padding: 0;
     }
     
     .cell-icon {
@@ -1093,18 +1437,21 @@ body {
     }
     
     .transport-title {
-        font-size: 2rem;
-        padding: 0 1rem;
+        font-size: 1.6rem;
+        top: 5%;
+        left: 35%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        line-height: 1.1;
     }
     
     .transport-cards-slide .transport-cards {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;
     }
     
     .transport-card {
-        aspect-ratio: 1;
-        padding: 1.5rem;
+        padding: 1rem;
+        height: 200px;
     }
     
     .system-integrations-container {
@@ -1141,33 +1488,36 @@ body {
     
     
     .system-integration-item span {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     
     .card-title {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     
     .card-text {
-        font-size: 0.8rem;
+        font-size: 1.5rem;
     }
     
     .offers-title {
-        font-size: 1.8rem;
-        padding: 0 1rem;
+        font-size: 1.4rem;
+        padding: 1rem 0.8rem;
+        line-height: 1.3;
     }
     
     .table-header {
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
     }
     
     .offers-slide {
-        padding: 50px 0;
+        padding: 30px 0;
     }
     
-    .offers-title {
-        font-size: 1.2rem;
-        padding: 1.5rem 1rem;
+    .header-cell {
+        padding: 0.6rem;
+        font-size: 1rem;
+        min-height: 80px;
     }
     
     .table-content {
@@ -1198,16 +1548,28 @@ body {
     }
     
     .header-effect h3 {
-        font-size: 2rem;
+        font-family: 'Helvetica Neue', 'Arial Black', 'Arial', sans-serif !important;
+        font-size: 2.5rem;
+        font-weight: 900 !important;
+        margin: 0 0 0.6rem 0;
+    }
+    
+    .header-effect h3 .prefix {
+        font-size: 1.2rem;
     }
     
     .table-header-effect {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 0.8rem;
     }
     
     .header-effect {
-        padding: 1.5rem 1rem;
+        padding: 1rem 0.8rem;
+        min-height: 120px;
+    }
+    
+    .header-effect p {
+        font-size: 1rem;
     }
     .introduction {
         gap: 1rem;
@@ -1263,6 +1625,9 @@ body {
     }
 }
 @media (max-width: 480px) {
+    .nav {
+        gap: 0.5rem;
+    }
     .main-title {
         font-size: 2rem;
     }
@@ -1277,7 +1642,7 @@ body {
     }
     
     .container {
-        padding: 0 15px;
+        padding: 0;
     }
     
     .hero {
@@ -1285,24 +1650,72 @@ body {
         min-height: 80vh;
     }
     
-    .transport-card {
-        padding: 1rem;
+    .transport-cards-slide .transport-cards {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
     }
     
+    
     .card-title {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
     .card-text {
-        font-size: 0.7rem;
+        font-size: 1rem;
+    }
+    
+    .offers-title {
+        font-size: 1.2rem;
+        padding: 0.8rem 0.5rem;
+        line-height: 1.2;
+    }
+    
+    .table-header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+    
+    .header-cell {
+        padding: 0.4rem;
+        font-size: 1rem;
+        min-height: 60px;
+    }
+    
+    .offers-slide {
+        padding: 20px 0;
     }
     
     .header-effect h3 {
+        font-family: 'Helvetica Neue', 'Arial Black', 'Arial', sans-serif !important;
         font-size: 2rem;
+        font-weight: 900 !important;
+        margin: 0 0 0.4rem 0;
+    }
+    
+    .header-effect h3 .prefix {
+        font-size: 1rem;
     }
     
     .header-effect p {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
+    }
+    
+    .table-header-effect {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    
+    .header-effect {
+        padding: 0.8rem 0.6rem;
+        min-height: 100px;
+    }
+    
+    .transport-title {
+        font-size: 1.4rem;
+        top: 6%;
+        left: 40%;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        line-height: 1.1;
     }
     
     .system-integration-item {
@@ -1310,7 +1723,7 @@ body {
     }
     
     .system-integration-item span {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
     
     .contact-form {
@@ -1343,15 +1756,39 @@ body {
     .system-integration-item-right {
         width: 100%;
     }
-    
+    .introduction-content-item-text-2 {
+        height: 250px;
+    }
+    .introduction-content-item-text-3 {
+        height: 250px;
+    }
+    .introduction-content-item-text-1 {
+        height: 250px;
+    }
+    .introduction-content-item-text-sub-title {
+        font-size: 1rem;
+    }
     .introduction-content-item-text-title {
-        padding: 1rem;
-        width: 30%;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        width: 35%;
     }
     .introduction-content-item-table-item-text {
-        width: 40%;
+        width: 45%;
+        font-size: 1rem;
+        padding: 0.3rem;
+    }
+    .introduction-content-item-table-item-text-2 {
+        font-size: 1rem;
+        padding: 0.3rem;
     }
     .introduction-content-item-table-item-text-3 {
-        width: 40%;
+        width: 45%;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .introduction-content-item-table-item-text-4 {
+        font-size: 1rem;
+        padding: 0.5rem;
     }
 }

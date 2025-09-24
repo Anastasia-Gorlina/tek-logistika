@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ТЭК ЛОГИСТИКА - Управление логистикой под вашим контролем</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,18 +15,22 @@
         <section id="hero" class="hero">
             <nav class="nav">
                 <div class="nav-brand">
-                    <img src="image/image-16.png"  alt="Логотип ТЭК ЛОГИСТИКА" class="logo" />
+                    <img src="image/logo_black.svg"  alt="Логотип ТЭК ЛОГИСТИКА" class="logo" />
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#hero">о решении</a></li>
-                    <li><a href="#about">возможности</a></li>
-                    <li><a href="#about2">предложения</a></li>
-                    <li><a href="#contact">кейсы</a></li>
-                    <li><a href="#contact">контакты</a></li>
-                </ul>
+                <div class="nav-content">
+                    <ul class="nav-menu">
+                        <li><a href="#hero">о решении</a></li>
+                        <li><a href="#about">возможности</a></li>
+                        <li><a href="#about2">предложения</a></li>
+                        <li><a href="#contact">кейсы</a></li>
+                    </ul>
+                    <div class="nav-contact">
+                        <a href="#contact">контакты</a>
+                    </div>
+                </div>
             </nav>
             <div class="hero-content">
-                <h1 class="main-title">ТЭК ЛОГИСТИКА</h1>
+                <h1 class="main-title">ТЭК. ЛОГИСТИКА</h1>
                 <h2 class="hero-subtitle"> управление логистикой под вашим контролем </h2>
             </div>
         </section>
@@ -31,19 +38,21 @@
         <section id="about" class="about">
             <div class="container">
                 <div class="about-content">
-                    <div class="about-text no-triangles">
+                    <div class="about-text no-triangles description-text">
                         <h3 class="section-title">Описание</h3>
                         <p>наше ИТ-решение предназначено для управления отгрузкой<br>
                             на производственных предприятиях. За счет нашей системы<br>
                             можно оптимизировать процессы планирования отгрузки<br>
                             продукции, управлять мониторингом груза в пути</p>
                     </div>
-                    <div class="about-text">
+                    <div class="about-text with-border">
                         <h3 class="section-title">Решение разработано для производственных<br>предприятий, которые хотят:</h3>
-                        <p>сократить затраты на отгрузку и логистику</p>
-                        <p>увеличить объемы отгружаемой продукции</p>
-                        <p> автоматизировать процессы отгрузки и логистики</p>
-                        <p>оптимизировать затраты по цепочке добавленной стоимости</p>
+                        <div class="about-text-content">
+                            <p>сократить затраты на отгрузку и логистику</p>
+                            <p>увеличить объемы отгружаемой продукции</p>
+                            <p> автоматизировать процессы отгрузки и логистики</p>
+                            <p>оптимизировать затраты по цепочке добавленной стоимости</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,9 +111,8 @@
         <section id="transport" class="transport-slide">
             <div class="container">
                 <div class="transport-content">
-                    <h2 class="transport-title">Автоматизируем логистические<br>операции по видам транспорта</p>
+                    <h2 class="transport-title">Автоматизируем логистические<br>операции по видам транспорта</h2>
                         <div class="transport-texts">
-
                             <p class="transport-text-1">Ж/Д</p>
 
                             <p class="transport-text-2">трубо-<br>проводный </p>
@@ -182,11 +190,26 @@
                 <div class="header-cell">комплексного<br> внедрения<br> продукта<br> с адаптацией<br> под процессы<br> заказчика</div>
                 <div class="header-cell">предоставления<br> актуальной<br> версии<br> продукта<br> и обновлений</div>
                 <div class="header-cell">сопровождения<br> проектов<br> внедрения<br> продукта,<br> выполняемых<br> силами сторонних<br> компаний</div>
-                <div class="header-cell">коробочное<br> решение</div>
-                <div class="header-cell">настройка<br> и установка<br> готового<br> решения</div>                    
-                <div class="header-cell">адаптация<br> и доработка ПО</div>
-                <div class="header-cell">техническая<br> поддержка<br> лицензии</div>
-                <div class="header-cell">авторский<br> надзор</div>
+                <div class="header-cell">
+                    <img src="image/image-05.png" class="header-cell-image">
+                    <p>коробочное<br> решение</p>
+                </div>
+                <div class="header-cell">
+                    <img src="image/image-05.png" class="header-cell-image">
+                    <p>настройка<br> и установка<br> готового<br> решения</p>
+                </div>                    
+                <div class="header-cell">
+                    <img src="image/image-05.png" class="header-cell-image">
+                    <p>адаптация<br> и доработка ПО</p>
+                </div>
+                <div class="header-cell">
+                    <img src="image/image-05.png" class="header-cell-image">
+                    <p>техническая<br> поддержка<br> лицензии</p>
+                </div>
+                <div class="header-cell">
+                    <img src="image/image-05.png" class="header-cell-image">
+                    <p>авторский<br> надзор</p>
+                </div>
             </div>
         </div>
     </div>
@@ -200,22 +223,26 @@
                     <p>повышение <br> оборачиваемости<br> автотранспорта<br> за счет снижения<br> времени на отгрузку</p></div>
                 <div class="header-effect">
                     <h3>+0.5%</h3>
-                    <p>рейса/сутки <br>
-                        увеличение <br>оборачиваемости <br>единицы <br>автотранспорта</p></div>
-                <div class="header-effect">
-                    <h3>до 15</h3>
-                    <p>минут на сбор аналитики <br>дашборды <br>для онлайн-мониторинга параметров отгрузки дашборды для онлайн- мониторинга параметров отгрузки</p>
+                    <p>рейса/сутки</p>
+                    <p>
+                        увеличение <br>оборачиваемости <br>единицы <br>автотранспорта
+                    </p> 
                 </div>
                 <div class="header-effect">
-                    <h3>до 40%</h3>
+                    <h3><span class="prefix">до</span> 15</h3>
+                    <p>минут на сбор аналитики</p>
+                    <p>дашборды <br>для онлайн-мониторинга параметров отгрузки</p>
+                </div>
+                <div class="header-effect">
+                    <h3><span class="prefix">до</span> 40%</h3>
                     <p>увелечение объемов<br> отгрузки</p>
                 </div>
                 <div class="header-effect">
-                    <h3>на 10%</h3>
+                    <h3><span class="prefix">на</span> 10%</h3>
                     <p>оптимизация затрат<br> на тарифы РЖД</p>
                 </div>
                 <div class="header-effect">
-                    <h3>от 20%</h3>
+                    <h3><span class="prefix">от</span> 20%</h3>
                     <p>сокращение затрат<br> на отгрузку</p>
                 </div>
             </div>
@@ -224,26 +251,25 @@
     </div>
 </section>
 
-
 <section id="introduction">
     <div class="container">
     <div class="introduction">
         <h2 class="section-title">Кейсы внедрения решения</h2>
         <div class="introduction-content">
             <div class="introduction-content-item">
-                <div class="introduction-content-item-text">
+                <div class="introduction-content-item-text-1">
                     <div class="introduction-content-item-text-title">
                         <h6>Кейс 1</h6>
-                        <p>НПЗ крупной ВИНК</p>
+                        <p>НПЗ <br> крупной <br> ВИНК</p>
                     </div>
                     <div class="introduction-content-item-text-sub-title">
-                        <p>Отгрузка нефтепродуктов 4 видами транспорта</p></div>
+                        <p>Отгрузка нефтепродуктов <br> 4 видами транспорта</p></div>
                     </div>
                 <div class="introduction-content-item-table">
                     <div class="introduction-content-item-table-item">
                         <div class="introduction-content-item-table-item-text"> 
                             <h3>до внедрения</h3>
-                            <p>неравномерная отгрузкав сутках</p>
+                            <p>неравномерная отгрузка в сутках</p>
                             <p>ограниченные объемы отгрузки</p>
                         </div>
                         <div class="introduction-content-item-table-item-text-2">
@@ -265,13 +291,13 @@
         </div>
         <div class="introduction-content">
             <div class="introduction-content-item">
-                <div class="introduction-content-item-text">
+                <div class="introduction-content-item-text-2">
                     <div class="introduction-content-item-text-title">
                         <h6>Кейс 2</h6>
                         <p>Нефтебаза</p>
                     </div>
                     <div class="introduction-content-item-text-sub-title">
-                        <p>Отгрузка нефтепродуктовЖД транспортом</p>
+                        <p>Отгрузка нефтепродуктов <br> ЖД транспортом</p>
                     </div>
                     </div>
                 <div class="introduction-content-item-table">
@@ -301,13 +327,13 @@
         </div>
         <div class="introduction-content">
             <div class="introduction-content-item">
-                <div class="introduction-content-item-text">
+                <div class="introduction-content-item-text-3">
                     <div class="introduction-content-item-text-title">
                         <h6>Кейс 3</h6>
                         <p>Авто-терминал нефте-хранилища</p>
                     </div>
                     <div class="introduction-content-item-text-sub-title">
-                        <p>Отгрузка нефтепродуктов автомобильным транспортом</p></div>
+                        <p>Отгрузка нефтепродуктов<br> автомобильным транспортом</p></div>
                     </div>
                 <div class="introduction-content-item-table">
                     <div class="introduction-content-item-table-item">
