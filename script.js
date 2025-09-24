@@ -11,18 +11,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const message = this.querySelector('textarea').value;
-        
-        if (!name || !email || !message) {
-            alert('Пожалуйста, заполните все поля');
+        if (!contactForm.checkValidity()) {
+            alert('Пожалуйста, заполните все поля корректно');
             return;
         }
         
@@ -32,15 +27,45 @@ if (contactForm) {
         submitButton.textContent = 'Отправляется...';
         submitButton.disabled = true;
         
-        setTimeout(() => {
-            alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
-            this.reset();
+        const formData = {
+            name: document.getElementById('name').value,
+            company: document.getElementById('company').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value
+        };
+        
+        try {
+            const response = await fetch('/mail.php', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                if (data?.success) {
+                    showSuccessModal(data?.message || 'Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+                    contactForm.reset();
+                } else {
+                    showErrorModal(data?.message || 'Произошла ошибка при отправке');
+                }
+            } else {
+                showErrorModal(data?.message || response.statusText || 'Произошла ошибка при отправке');
+            }
+            
+        } catch (error) {
+            console.error('Error:', error);
+            showErrorModal('Произошла ошибка при отправке. Проверьте подключение к интернету и попробуйте еще раз.');
+        } finally {
             submitButton.textContent = originalText;
             submitButton.disabled = false;
-        }, 2000);
+        }
     });
 }
-
 
 const ctaButton = document.querySelector('.cta-button');
 if (ctaButton) {
@@ -51,7 +76,6 @@ if (ctaButton) {
         });
     });
 }
-
 
 function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
@@ -77,4 +101,49 @@ window.addEventListener('scroll', function() {
             link.classList.add('active');
         }
     });
+});
+
+function showSuccessModal(message) {
+    const modal = document.getElementById('successModal');
+    const messageElement = document.getElementById('successMessage');
+    
+    if (messageElement) {
+        messageElement.textContent = message;
+    }
+    
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+function showErrorModal(message) {
+    const modal = document.getElementById('errorModal');
+    const messageElement = document.getElementById('errorMessage');
+    
+    if (messageElement) {
+        messageElement.textContent = message;
+    }
+    
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+}
+
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('modal')) {
+        closeModal(e.target.id);
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const openModal = document.querySelector('.modal.show');
+        if (openModal) {
+            closeModal(openModal.id);
+        }
+    }
 });

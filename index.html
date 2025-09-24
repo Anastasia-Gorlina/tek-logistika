@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ТЭК ЛОГИСТИКА - Управление логистикой под вашим контролем</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Шрифты теперь подключены локально через CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,10 +17,10 @@
                 </div>
                 <div class="nav-content">
                     <ul class="nav-menu">
-                        <li><a href="#hero">о решении</a></li>
-                        <li><a href="#about">возможности</a></li>
-                        <li><a href="#about2">предложения</a></li>
-                        <li><a href="#contact">кейсы</a></li>
+                        <li><a href="#about">о решении</a></li>
+                        <li><a href="#about2">возможности</a></li>
+                        <li><a href="#effects">предложения</a></li>
+                        <li><a href="#introduction">кейсы</a></li>
                     </ul>
                     <div class="nav-contact">
                         <a href="#contact">контакты</a>
@@ -395,11 +393,11 @@
                         <h3>ГОТОВЫ СОКРАТИТЬ
                             ИЗДЕРЖКИ И УСКОРИТЬ
                             ОТГРУЗКИ?</h3>
-                        <form>
-                            <input type="text" placeholder="ФИО" required>
-                            <input type="text" placeholder="название компании" required>
-                            <input type="tel" placeholder="телефон" required>
-                            <input type="email" placeholder="email" required>
+                        <form id="contactForm">
+                            <input type="text" name="name" id="name" placeholder="ФИО" required>
+                            <input type="text" name="company" id="company" placeholder="название компании" required>
+                            <input type="tel" name="phone" id="phone" placeholder="телефон" required>
+                            <input type="email" name="email" id="email" placeholder="email" required>
                             <button type="submit">подобрать решение</button>
                         </form>
                     </div>
@@ -421,6 +419,34 @@
             </div>
         
     </footer>
+
+    <!-- Модальные окна для сообщений -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            
+            <div class="modal-body">
+                <h3>Спасибо за заявку!</h3>
+                <p id="successMessage">Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="closeModal('successModal')">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="errorModal" class="modal">
+        <div class="modal-content error-modal">
+
+            <div class="modal-body">
+                <h3>Произошла ошибка</h3>
+                <p id="errorMessage">Попробуйте еще раз или свяжитесь с нами по телефону.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal('errorModal')">Закрыть</button>
+                <button class="btn-primary" onclick="closeModal('errorModal')">Попробовать снова</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

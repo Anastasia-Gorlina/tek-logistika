@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-    font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', 'Avenir', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
@@ -72,13 +73,19 @@ body {
 .nav-menu a:hover {
     color: #17336a;
     background: rgba(30, 58, 138, 0.1);
-    
+}
+
+.nav-menu a.active {
+    color: #ffffff;
+    background: #17336a;
+    padding: 8px 16px;
 }
 
 .nav-contact {
     padding-left: 2rem;
     /* border-left: 2px solid #17336a; */
 }
+
 
 .nav-contact a {
     color: #17336a;
@@ -131,7 +138,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 400;
     color: #17336a;
     text-align: right;
     align-self: flex-end;
@@ -1790,5 +1797,184 @@ body {
     .introduction-content-item-table-item-text-4 {
         font-size: 1rem;
         padding: 0.5rem;
+    }
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease-out;
+    position: relative;
+}
+
+
+.modal-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.success-icon {
+    background: linear-gradient(135deg, #10B981, #059669);
+    color: white;
+}
+
+.error-icon {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: white;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    color: #6B7280;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background: #F3F4F6;
+    color: #374151;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.modal-body h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 12px 0;
+    font-family: 'Inter', 'Avenir', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.modal-body p {
+    font-size: 16px;
+    color: #6B7280;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Inter', 'Avenir', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.modal-footer {
+    padding: 0 24px 24px 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-family: 'Inter', 'Avenir', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563EB, #1E40AF);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+    background: #F3F4F6;
+    color: #374151;
+    border: 1px solid #D1D5DB;
+}
+
+.btn-secondary:hover {
+    background: #E5E7EB;
+    transform: translateY(-1px);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+    .modal-content {
+        width: 95%;
+        margin: 20px;
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .modal-body h3 {
+        font-size: 20px;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
     }
 }
